@@ -1,0 +1,29 @@
+<!-- Botón para abrir/cerrar el sidebar -->
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Toggle Sidebar
+</button>
+
+<!-- Sidebar Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Sidebar</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a (click)="navRoutea('/peliculas')" class="nav-link active" aria-current="page">Peliculas</a>
+      </li>
+      <li>
+        <a (click)="navRoutea('actores')" class="nav-link link-dark">Actores</a>
+      </li>
+      <li>
+        <a (click)="navRoutea('AltaPelicula')" class="nav-link link-dark">Alta Pelicula</a>
+      </li>
+      <li>
+        <a (click)="navRoutea('AltaActor')" class="nav-link link-dark">Alta Actor</a>
+      </li>
+
+    </ul>
+  </div>
+</div>

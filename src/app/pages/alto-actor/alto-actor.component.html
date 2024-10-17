@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row g-5">
+    <!-- Formulario de altaActor -->
+    <div class="col-md-7 col-lg-8">
+      <h4 class="mb-3">Formulario de Alta de Actor</h4>
+      <form class="needs-validation" novalidate (ngSubmit)="guardarActor()">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="actor.nombre" name="nombre" required>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" [(ngModel)]="actor.apellido" name="apellido" required>
+          </div>
+
+          <div class="col-12">
+            <label for="documento" class="form-label">Documento</label>
+            <input type="text" class="form-control" id="documento" [(ngModel)]="actor.documento" name="documento" (input)="formatearDocumento($event)" maxlength="11">
+          </div>
+
+          <div class="col-md-5">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="edad" [(ngModel)]="actor.edad" name="edad" required>
+          </div>
+
+          <div class="col-md-7">
+            <label for="pais" class="form-label">País</label>
+            <input type="text" class="form-control" id="pais" [(ngModel)]="actor.pais" name="pais" readonly required>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Guardar Actor</button>
+      </form>
+    </div>
+
+    <!-- Componente tablaPaises (hijo) -->
+    <div class="col-md-5 col-lg-4">
+      <app-tabla-paises (onPaisSeleccionado)="actualizarPaisSeleccionado($event)"></app-tabla-paises>
+    </div>
+  </div>
+</div>

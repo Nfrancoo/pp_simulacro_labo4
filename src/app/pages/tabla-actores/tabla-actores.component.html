@@ -1,0 +1,27 @@
+<div>
+  <h4>Listado de Actores</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Documento</th>
+        <th>Edad</th>
+        <th>País</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let actor of actores">
+        <td>{{ actor.nombre }}</td>
+        <td>{{ actor.apellido }}</td>
+        <td>{{ actor.documento }}</td>
+        <td>{{ actor.edad }}</td>
+        <td>{{ actor.pais }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="seleccionarActor(actor)">Seleccionar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

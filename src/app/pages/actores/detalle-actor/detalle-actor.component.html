@@ -1,0 +1,21 @@
+<div *ngIf="actor" class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ actor.nombre }} {{ actor.apellido }}</h5>
+    <p class="card-text">
+      <strong>Documento:</strong> {{ actor.documento }}<br>
+      <strong>Edad:</strong> {{ actor.edad }} años<br>
+      <strong>País:</strong> {{ actor.pais }}
+    </p>
+  </div>
+</div>
+
+
+<!-- Se elimina el contenido de esta sección según las instrucciones -->
+<!-- <div *ngIf="actor"></div>
+  <h3>Detalles del Actor</h3>
+  <p><strong>Nombre:</strong> {{ actor.nombre }}</p>
+  <p><strong>Apellido:</strong> {{ actor.apellido }}</p>
+  <p><strong>Documento:</strong> {{ actor.documento }}</p>
+  <p><strong>Edad:</strong> {{ actor.edad }}</p>
+  <p><strong>País:</strong> {{ actor.pais }}</p>
+</div> -->

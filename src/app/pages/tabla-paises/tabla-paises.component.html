@@ -1,0 +1,7 @@
+<ul class="container-tabla-paises">
+  <li *ngFor="let pais of paises" class="list-group-item d-flex justify-content-between lh-sm" (click)="seleccionarPais(pais.name.common)">
+    <div>
+      <h6 class="my-0">{{ pais.name.common }}</h6>
+    </div>
+  </li>
+</ul>

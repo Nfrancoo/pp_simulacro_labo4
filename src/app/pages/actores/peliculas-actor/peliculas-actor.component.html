@@ -1,0 +1,11 @@
+<div *ngIf="peliculas$ | async as peliculas; else noPeliculas">
+  <ul>
+    <li *ngFor="let pelicula of peliculas">
+      {{ pelicula.nombre }} - Estrenada el {{ pelicula.fechaEstreno | date }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noPeliculas>
+  <p>No hay películas para este actor.</p>
+</ng-template>

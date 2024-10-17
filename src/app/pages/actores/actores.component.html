@@ -1,0 +1,33 @@
+<div class="container py-4 " style="border-width: 5px;">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Actores</h1>
+      <p class="col-md-8 fs-4">Listado de actores disponibles.</p>
+
+      <!-- Componente listadoActores -->
+      <app-listado-actores (actorSeleccionado)="seleccionarActor($event)"></app-listado-actores>
+    </div>
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-4">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>Detalles del Actor</h2>
+        <app-detalle-actor [actor]="actorSeleccionado"></app-detalle-actor>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="h-100 p-5 text-white bg-primary rounded-3">
+        <h2>Detalles del País</h2>
+        <app-detalle-pais [pais]="actorSeleccionado?.pais"></app-detalle-pais>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="h-100 p-5 bg-light rounded-3">
+        <h2>Películas del Actor</h2>
+        <app-peliculas-actor [actor]="actorSeleccionado"></app-peliculas-actor>
+      </div>
+    </div>
+</div>

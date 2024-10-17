@@ -1,0 +1,11 @@
+<div *ngIf="actores$ | async as actores; else noActores">
+  <ul>
+    <li *ngFor="let actor of actores" (click)="seleccionarActor(actor)">
+      {{ actor.nombre }} {{ actor.apellido }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noActores>
+  <p>No hay actores disponibles</p>
+</ng-template>

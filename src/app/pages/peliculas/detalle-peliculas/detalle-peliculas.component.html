@@ -1,0 +1,11 @@
+<div *ngIf="pelicula">
+  <h3>{{ pelicula.nombre }}</h3>
+  <p>Tipo: {{ pelicula.tipo }}</p>
+  <p>Fecha de Estreno: {{ pelicula.fechaEstreno | date }}</p>
+  <p>Cantidad de Público: {{ pelicula.cantidadPublico }}</p>
+  <img [src]="pelicula.foto" alt="{{ pelicula.nombre }}" width="200">
+  <p>Protagonista: {{ pelicula.protagonista }}</p>
+</div>
+<div *ngIf="!pelicula">
+  <p>Seleccione una película para ver los detalles.</p>
+</div>
